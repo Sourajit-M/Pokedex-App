@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/pokemonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Pokémon Name"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Pokémon"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:backgroundTint="#EF5350"
+        android:textColor="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"/>
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Pokemon Image"/>
+
+    <TextView
+        android:id="@+id/pokemonDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pokémon Details Will Appear Here"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"/>
+</LinearLayout>
