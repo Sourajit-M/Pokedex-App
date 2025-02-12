@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +30,8 @@ public class PokeFinder extends AppCompatActivity {
     private TextView pokemonDetails;
     private ProgressBar progressBar;
     private PokeApiService pokeApiService;
+    private Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,12 @@ public class PokeFinder extends AppCompatActivity {
         pokemonImage = findViewById(R.id.pokemonImage);
         pokemonDetails = findViewById(R.id.pokemonDetails);
         progressBar = findViewById(R.id.progressBar);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Pokemon Search");
+        }
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
